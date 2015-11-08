@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:p2="http://gazprom.ru/gtf/directum/export_zap" xmlns:p1="http://gazprom.ru/gtf/directum/export_spec" name="mi_ao_spec_resp" targetNamespace="http://gazprom.ru/gtf/directum/export_spec">
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://gazprom.ru/gtf/directum/export_zap" targetNamespace="http://gazprom.ru/gtf/directum/export_zap">
+            <xsd:element name="Z_GTF_RESP_SED.resp">
+                <xsd:complexType>
+                    <xsd:all>
+                        <xsd:element name="Items" minOccurs="0">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="RC_CODE" type="xsd:integer" minOccurs="0" />
+                                    <xsd:element name="KEY" minOccurs="0">
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="60" />
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="LINK_SED" minOccurs="0">
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="30" />
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="IT_MES" type="BAPIRETURN1" minOccurs="0" maxOccurs="unbounded" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:all>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:complexType name="BAPIRETURN1">
+                <xsd:sequence>
+                    <xsd:element name="TYPE" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="1" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="ID" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="20" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="NUMBER" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="3" />
+                                <xsd:pattern value="\d+" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MESSAGE" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="220" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="LOG_NO" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="20" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="LOG_MSG_NO" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="6" />
+                                <xsd:pattern value="\d+" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MESSAGE_V1" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MESSAGE_V2" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MESSAGE_V3" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="MESSAGE_V4" minOccurs="0">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="p2.Z_GTF_RESP_SED.resp">
+        <wsdl:part xmlns:generateduniqueprefix6="http://gazprom.ru/gtf/directum/export_zap" name="Z_GTF_RESP_SED.resp" element="generateduniqueprefix6:Z_GTF_RESP_SED.resp" />
+    </wsdl:message>
+    <wsdl:portType name="mi_ao_spec_resp">
+        <wsdl:operation name="mi_ao_spec_resp">
+            <wsdl:input message="p1:p2.Z_GTF_RESP_SED.resp" />
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="mi_ao_spec_respBinding" type="p1:mi_ao_spec_resp">
+        <soap:binding xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="mi_ao_spec_resp">
+            <soap:operation xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="http://sap.com/xi/WebService/soap1.1" />
+            <wsdl:input>
+                <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal" />
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="mi_ao_spec_respService">
+        <wsdl:port name="mi_ao_spec_respPort" binding="p1:mi_ao_spec_respBinding">
+            <soap:address xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" location="https://sz21.adm.gazprom.ru:50001/XISOAPAdapter/MessageServlet?channel=:GKI_DIRECTUM_DEV:SED_Sender_Export_Resp&amp;version=3.0&amp;Sender.Service=GKI_DIRECTUM_DEV&amp;Interface=http%3A%2F%2Fgazprom.ru%2Fgtf%2Fdirectum%2Fexport_spec%5Emi_ao_spec_resp" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

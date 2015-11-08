@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <title>Trablz</title>
+    <!-- required meta -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0" />
+
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,400italic,300,700,400&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+
+
+
+    <!-- stylesheets-->
+    <link rel="stylesheet" href="css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="css/icons.css" type="text/css"/>
+    <link rel="stylesheet" href="css/screen.css" type="text/css"/>
+    <!--
+     <link rel="stylesheet" href="css/general.css" type="text/css"/>
+    <link rel="stylesheet" href="css/mobile.css" type="text/css"  media="only screen and (max-width:480px)"/>
+    <link rel="stylesheet" href="css/middle.css" type="text/css" media="only screen and (min-width:481px) and (max-width: 1024px)"/>
+    <link rel="stylesheet" href="css/desktop.css" type="text/css" media="only screen and (min-width: 1025px)"/>
+    -->
+  </head>
+  <body>
+    <header>
+      <!-- Часы, курсы валют -->
+      <div class="clock hide-mobile">
+        <span class="day">Вторник. 6 января 2015 года</span>
+        <span class="time">12:00:43 МСК</span>
+        <span class="currency">$43.44 €65.34 ВСО 35.34</span>
+      </div>
+      <!-- Блок с баннером -->
+      <div class="banner-block">
+        <a href="#"><img src="tmp/banner.png"></a>
+      </div>
+      <!-- Навигация -->
+      <nav id="sticker">
+        <div class="logo">
+          <a href='#' title='Trablz'>
+            <img src="img/logo.svg" alt="Trablz" title="Trablz">
+          </a>
+        </div>
+        <ul id="header-nav-global">
+          <li class='active'><a href='#'>Главное</a></li>
+          <li><a href='#'>Новости</a></li>
+          <li><a href='#'>Статьи</a></li>
+        </ul>
+        <ul id="header-nav-inner">
+          <li class='active'><a href='#'>Общество</a></li>
+          <li data-trigger='2'><a href='#'>Политика</a></li>
+          <li data-trigger='3'><a href='#' data-trigger='3'>Экономика</a></li>
+          <li data-trigger='4'><a href='#' data-trigger='4'>Культура</a></li>
+        </ul>
+        <ul id="header-menu-buttons">
+          <li class='icon i-account'><a href="#" data-id='signin'></a></li>
+          <li class='icon i-plus' ><a data-id='signup' href="#"></a></li>
+          <li class='icon i-down' ><a data-id='categories' href="#"></a></li>
+          <li class='icon i-search'><a data-id='togglesearch' href="#"></a></li>
+        </ul>
+        <div class='searchfield sf-out hide-tablet hide-mobile'>
+          <label>
+            <input type='text' name='searchQ' />
+          </label>
+        </div>
+        <div id='underNav' class='clearfix'>
+          <div id='togglesearch' class='searchfield'>
+            <label>
+              <input type='text' name='searchQ' />
+            </label>
+          </div>
+          <div id='signin' class='clearfix'>
+            <span>Войдите</span>
+            <form>
+              <div class='fieldGroup clearfix'>
+                  <div class='float-inner tablet-1'>
+                    <input type='email' name='email' placeholder='E-mail'/>
+                    <div class='clearfix'>
+                      <a href='#'>У вас еще нет профиля?</a>
+                    </div>
+                  </div>
+                  <div class='float-inner tablet-1'>
+                    <input type='password' name='pass' placeholder='Пароль'/>
+                    <div class='clearfix'>
+                      <a href='#'>Забыли пароль?</a>
+                      <label class='chkbx'>
+                        <input type='checkbox' name='savepwd'/>
+                        <span>Запомнить</span>
+                      </label>
+                      <button>Войти</button>
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+          <div id='signup' class='clearfix'>
+            <span>Регистрация</span>
+            <form>
+                <input type='email' name='email' placeholder='E-mail'/>
+                <input type='password' name='pass' placeholder='Пароль'/>
+                <input type='password' name='pass_rep' placeholder='Повторите пароль'/>
+                <input type='text' name='phone' placeholder='Номер телефона'/>
+                <div id='captcha'>
+                  <div id="chiholder"><input type='text' name='captcha' placeholder='Номер'/>
+                  </div>
+                  <div class="capcha-img"><img src='tmp/captcha.png'></div>
+                </div>
+                <button class="registration">Регистрация</button>
+            </form>
+          </div>
+          <div id='categories' class='clearfix'>
+               <div class="footernews">
+          <div class="footer-column">
+            <ul><h4>Экономика</h4>
+              <li><a href="#">Производство</a></li>
+              <li><a href="#">Распределение</a></li>
+              <li><a href="#">Обмен</a></li>
+              <li><a href="#">Потребление</a></li>
+              <li><a href="#">Налоги</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul><h4>Политика</h4>
+              <li><a href="#">Граждане</a></li>
+              <li><a href="#">Политики</a></li>
+              <li><a href="#">Партии</a></li>
+              <li><a href="#">Государство</a></li>
+              <li><a href="#">Закон</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul><h4>Общество</h4>
+              <li><a href="#">Мораль</a></li>
+              <li><a href="#">Наука</a></li>
+              <li><a href="#">Искусство</a></li>
+              <li><a href="#">Религия</a></li>
+              <li><a href="#">Право</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul><h4>Культура</h4>
+              <li><a href="#">Образование</a></li>
+              <li><a href="#">Культура</a></li>
+              <li><a href="#">Здравоохранение</a></li>
+              <li><a href="#">Питание</a></li>
+              <li><a href="#">Транспорт</a></li>
+            </ul>
+          </div>
+        </div>
+          </div>
+        </div>
+      </nav>
+      <!-- END Навигация -->
+
+    </header>
+    <!-- Новостная лента --> 
+    <main>
+      <!-- Внешняя обертка  -->
+        <!-- Внутренние обертки  -->
+      <div id='msnr' class='clearfix'>
+        <div class='float col-2 no-border height-1'>
+          <div class="news news-type-0">
+            <div class="news-media"><img src="tmp/news1.png"></div>
+            <div class="news-content clearfix">
+              <h3>Прошел концерт в Кремле</h3>
+              <p class="hide-mobile">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый. Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый.
+              <br><br>
+              Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый.</p>
+              <!-- да, тк это ньюс-тайп-0 здесь время и ссылка внутри контента, да будет так -->
+              <time pubdate datetime="2012-12-23">21.02.2015</time>
+                <a class="read" href="#">Читать</a>
+            </div>
+          </div>
+        </div>
+        <div class='float col-1 height-2'>
+          <div class="news news-type-2">
+            <div class="news-content clearfix">
+              <h3>Проснувшись однажды утром после беспокойного</h3>
+              <h4 class="news-intro">Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Душа моя озарена неземной радостью, как эти чудесные весенние Душа моя озарена неземной радостью, как эти чудесные весенние утра.</h4>
+              <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого ручья и, прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость всемогущего, создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг, меня часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!" Друг</p>
+            </div>
+            <div class='news-infos clearfix'>
+                <time pubdate datetime="2012-12-23">1 января 2015, 23:22</time>
+                <a class="read" href="#">Читать</a>
+            </div>
+          </div>
+        </div>
+        <div class='float col-1 height-1'>
+          <div class="news news-type-1">
+            <div class="news-content clearfix">
+              <h3>Проснувшись однажды утром после беспокойного</h3>
+              <p>Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Душа моя озарена неземной радостью, как эти чудесные весенние Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так</p>
+            </div>
+            <div class='news-infos clearfix'>
+              <time pubdate datetime="2012-12-23">1 января 2015, 23:22</time>
+              <a class="read" href="#">Читать</a>
+            </div>
+          </div>
+        </div>
+        <div class='float col-1 height-1'>
+          <div class="news news-type-1 ">
+              <div class="news-content clearfix">
+                <h3>Проснувшись однажды утром после беспокойного</h3>
+                <p>Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Душа моя озарена неземной радостью, как эти чудесные весенние Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так</p>
+            </div>
+            <div class='news-infos clearfix'>
+                <time pubdate datetime="2012-12-23">1 января 2015, 23:22</time>
+                <a class="read" href="#">Читать</a>
+            </div>
+          </div>
+        </div>
+        <div class='float col-1 height-2'>
+          <h6 class='section-headline'>Общество</h6>
+          <div class="news news-type-3">
+          <div class="news-content clearfix">
+            <h3>Проснувшись однажды утром после беспокойного</h3>
+            <div class="news-media"><img src="tmp/news2.png"></div>
+            <p>Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Душа моя озарена неземной радостью, как эти чудесные весенние Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так</p>
+          </div>
+          <div class='news-infos clearfix'>
+              <time pubdate datetime="2012-12-23">1 января 2015, 23:22</time>
+              <a class="read" href="#">Читать</a>
+          </div>
+        </div>
+        </div>
+        <div class='float col-1 height-2'>
+        <div class="news news-type-2">
+          <div class="news-content clearfix">
+            <h3>Проснувшись однажды утром после беспокойного</h3>
+            <h4 class="news-intro">Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Душа моя озарена неземной радостью, как эти чудесные весенние Душа моя озарена неземной радостью, как эти чудесные весенние утра.</h4>
+            <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого ручья и, прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость всемогущего, создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг, меня часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!" Я чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость всемогущего, создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, Друг</p>
+          </div>
+          <div class='news-infos clearfix'>
+              <time pubdate datetime="2012-12-23">1 января 2015, 23:22</time>
+              <a class="read" href="#">Читать</a>
+          </div>
+        </div>  
+        </div>
+        <div class='float col-1 height-2'>
+          <h6 class='section-headline'>ЭКОНОМИКА</h6>
+          <div class="news news-type-2">
+            <div class="news-content clearfix">
+              <h3>Проснувшись однажды утром после беспокойного</h3>
+              <h4 class="news-intro">Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Душа моя озарена неземной радостью, как эти чудесные весенние Душа моя озарена неземной радостью, как эти чудесные весенние утра.</h4>
+              <p>Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Душа моя озарена неземной радостью, как эти чудесные весенние Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так. Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Душа моя озарена неземной радостью, как эти чудесные весенние Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так. Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Душа моя озарена неземной радостью, как эти чудесные весенние Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так</p>
+            </div>
+            <div class='news-infos clearfix'>
+                <time pubdate datetime="2012-12-23">1 января 2015, 23:22</time>
+                <a class="read" href="#">Читать</a>
+            </div>
+          </div> 
+        </div>
+
+        <div class='float col-2 height-1 no-border'>
+          <div class="news news-type-4 nb_color_black">
+            <div class="news-media"><img src="tmp/news3.png"></div>
+            <div class="news-content clearfix">
+              <h3>Проснувшись однажды утром после беспокойного</h3>
+              <p>Как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</p>
+            </div>
+            <div class='news-infos clearfix'>
+                <time pubdate datetime="2012-12-23">1 января 2015, 23:22</time>
+                <a class="read" href="#">Читать</a>
+            </div>
+          </div> 
+        </div>
+
+     
+      <!-- загрузить еще статьи -->
+      <div class="get-more-articles collapsed">
+        <!--<a href="#">Читать больше</a>
+      </div>-->
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+
+        <!-- вернуться в начало страницы-->
+        <a id="scrollTopButton"></a>
+
+        <!-- меню-->
+        <div class="footernews">
+          <div class="footer-column">
+            <ul><h4>Экономика</h4>
+              <li><a href="#">Производство</a></li>
+              <li><a href="#">Распределение</a></li>
+              <li><a href="#">Обмен</a></li>
+              <li><a href="#">Потребление</a></li>
+              <li><a href="#">Налоги</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul><h4>Политика</h4>
+              <li><a href="#">Граждане</a></li>
+              <li><a href="#">Политики</a></li>
+              <li><a href="#">Партии</a></li>
+              <li><a href="#">Государство</a></li>
+              <li><a href="#">Закон</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul><h4>Общество</h4>
+              <li><a href="#">Мораль</a></li>
+              <li><a href="#">Наука</a></li>
+              <li><a href="#">Искусство</a></li>
+              <li><a href="#">Религия</a></li>
+              <li><a href="#">Право</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul><h4>Культура</h4>
+              <li><a href="#">Образование</a></li>
+              <li><a href="#">Культура</a></li>
+              <li><a href="#">Здравоохранение</a></li>
+              <li><a href="#">Питание</a></li>
+              <li><a href="#">Транспорт</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- правовая информация-->
+        <div id="additional-info" class='clearfix'>  
+          <div class="footer-column">
+            <ul><h4>Правовая информация</h4>
+              <li><a href="#">Правила использования</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Сведения о рекламе</a></li>
+              <li><a href="#">Контактная информация</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <ul><h4>Связь с общественностью</h4>
+              <li><a href="#">Реферальная программа</a></li>
+              <li><a href="#">Авторам</a></li>
+              <li><a href="#">Исследователям уязвимостей</a></li>
+              <li><a href="#">Правообладателям</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- copyrights-->
+        <div id="copyrights">
+          <img src="img/logo_footer.svg" alt="All right reserved. Trablz inc. 2015">
+          <a class="reserved">Copyright © 2015 Trablz, LLC. All reserved.</a>
+        </div> 
+        
+        </div> 
+      </div>
+    </footer>
+    <!-- хз, временно или нет, но js -->
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src='js/func.js'></script>
+    
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Построение графиков на JQuery в примерах - Поддержка интерактивности</title>
+    <link href="layout.css" rel="stylesheet" type="text/css"></link>
+    <!--[if IE]><script language="javascript" type="text/javascript" src="../excanvas.pack.js"></script><![endif]-->
+    <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery.flot.pack.js"></script>
+ </head>    
+<body>
+    <h1>Flot Examples</h1>
+
+    <div id="placeholder" style="width:600px;height:300px;"></div>
+
+    <p>Multiple axis support showing the raw oil price in US $/barrel of
+    crude oil vs. the exchange rate from US $ to €.</p>
+
+    <p>As illustrated, you can put in multiple axes if you
+    need to. For each data series, simply specify the axis number.
+    In the options, you can then configure where you want the extra
+    axes to appear.</p>
+
+    <p>Position axis <button>left</button> or <button>right</button>.</p>
+
+<script type="text/javascript">
+$(function () {
+    
+    function euroFormatter(v, axis) {
+        return v.toFixed(axis.tickDecimals) +"€";
+    }
+     var oilprices = [[1167692400000,61.05], [1167778800000,58.32]];
+    var exchangerates = [[1167692400000,1], [1167778800000,2]];
+    function doPlot(position) {
+        $.plot($("#placeholder"),
+           [ { data: oilprices, label: "Oil price ($)" },
+             { data: exchangerates, label: "USD/EUR exchange rate", yaxis: 2 }],
+           { 
+               xaxes: [ { mode: 'time' } ],
+               yaxes: [ { min: 0 },
+                        {
+                          // align if we are to the right
+                          alignTicksWithAxis: position == "right" ? 1 : null,
+                          position: position,
+                           ticks: [[0, "zero"], [1.2, "one mark"], [2.4, "two marks"]]
+                        } ],
+               legend: { position: 'sw' }
+           });
+    }
+    doPlot("right");
+    
+    $("button").click(function () {
+        doPlot($(this).text());
+    });
+});
+</script>
+ </body>
+</html>
