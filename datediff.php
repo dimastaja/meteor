@@ -3,7 +3,7 @@
 <? require $_SERVER["DOCUMENT_ROOT"]."/function.php";
 
 $query="SELECT * FROM `errupt_possibility` where possobility>0.5 and metka<1 order by Date asc";
-$res = $db->query($query);
+$res = $db-> query($query);
 while($row =$res->fetch_assoc())
 {
     $row['sec']=strtotime($row['Date']);
