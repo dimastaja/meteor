@@ -7,6 +7,7 @@ $res = $db-> query($query);
 while($row =$res->fetch_assoc())
 {
     $row['sec']=strtotime($row['Date']);
+    $a="a";
     $arItems[]=$row;
     
     
